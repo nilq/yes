@@ -1,5 +1,5 @@
 class Lexer
-  KEY_WORDS = [ "func", "class", "if", "yes", "no", "nothing"]
+  KEY_WORDS = [ "func", "if", "yes", "no", "nothing"]
   def tokenize (code)
     code.chomp!
     tokens = []
