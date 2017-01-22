@@ -1,5 +1,5 @@
 class Lexer
-  KEY_WORDS = [ "func", "if", "yes", "no", "nothing"]
+  KEY_WORDS = [ "func", "if", "something", "while", "yes", "no", "nothing"]
   def tokenize (code)
     code.chomp!
     tokens = []
@@ -27,7 +27,7 @@ class Lexer
       elsif string = chunk[/\A"([^"]*)"/, 1]
         tokens << [:STRING, string]
         i += string.size + 2 # exclude '"'
-      elsif indent = chunk[/\A\:\n( +)/m, 1]
+      elsif indent = chunk[/\A\}\n( +)/m, 1]
         if indent.size <= current_indent
           raise "Fucked up indentation, #{indent.size} indents, " +
                 "expected > #{current_indent}"

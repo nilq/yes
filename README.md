@@ -11,8 +11,8 @@ Example
 ---
 
 ```
-func fib(n):
-  if n < 2:
+func fib(n)}
+  if n <= 1}
     0
   n + fib(n - 1)
 ```
