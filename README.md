@@ -28,12 +28,10 @@ This should work, will test later ... :
 
 ```
 something Hello:
-  func fib(n):
-    if n <= 1:
-      0
-    n + fib(n - 1)
+  func say_hello(name):
+    "hey, " + name
 
-  func dont_call_this(not_sure):
-    while yes:
-      nothing
+hello = Hello.new
+if hello:
+  print(hello.say_hello("world"))
 ```
