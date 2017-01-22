@@ -1,5 +1,7 @@
 something Hello:
-  func fib(n):
-    0
+  func say_hello(name):
+    "hey, " + name
 
-foo = Hello.new
+hello = Hello.new
+if hello:
+  print(hello.say_hello("world"))
