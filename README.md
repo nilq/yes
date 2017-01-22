@@ -19,7 +19,7 @@ something Hello:
       0
     n + fib(n - 1)
 
-  func no(not_sure):
+  func dont_call_this(not_sure):
     while yes:
       nothing
 ```
