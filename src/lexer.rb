@@ -21,7 +21,7 @@ class Lexer
       elsif constant = chunk[/\A([A-Z]\w*)/, 1]
         tokens << [:CONSTANT, constant]
         i += constant.size
-      elsif number = cunk[/\A([0-9]+)/, 1]
+      elsif number = chunk[/\A([0-9]+)/, 1]
         tokens << [:NUMBER, number.to_i]
         i += number.size
       elsif string = chunk[/\A"([^"]*)"/, 1]
