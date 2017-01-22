@@ -5,7 +5,7 @@ token FUNC
 token NEWLINE
 token NUMBER
 token STRING
-token TRUE FALSE NOTHING
+token YES NO NOTHING
 token IDENTIFIER
 token CONSTANT
 token INDENT DEDENT
@@ -61,8 +61,8 @@ rule
   Literal:
     NUMBER                        { result = NumberNode.new(val[0]) }
   | STRING                        { result = StringNode.new(val[0]) }
-  | TRUE                          { result = TrueNode.new }
-  | FALSE                         { result = FalseNode.new }
+  | YES                          { result = YesNode.new }
+  | NO                         { result = NoNode.new }
   | NOTHING                           { result = NothingNode.new }
   ;
 

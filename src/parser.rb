@@ -262,8 +262,8 @@ racc_token_table = {
   :NEWLINE => 4,
   :NUMBER => 5,
   :STRING => 6,
-  :TRUE => 7,
-  :FALSE => 8,
+  :YES => 7,
+  :NO => 8,
   :NOTHING => 9,
   :IDENTIFIER => 10,
   :CONSTANT => 11,
@@ -319,8 +319,8 @@ Racc_token_to_s_table = [
   "NEWLINE",
   "NUMBER",
   "STRING",
-  "TRUE",
-  "FALSE",
+  "YES",
+  "NO",
   "NOTHING",
   "IDENTIFIER",
   "CONSTANT",
@@ -465,14 +465,14 @@ module_eval(<<'.,.,', 'grammar.y', 62)
 
 module_eval(<<'.,.,', 'grammar.y', 63)
   def _reduce_23(val, _values, result)
-     result = TrueNode.new 
+     result = YesNode.new 
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'grammar.y', 64)
   def _reduce_24(val, _values, result)
-     result = FalseNode.new 
+     result = NoNode.new 
     result
   end
 .,.,
