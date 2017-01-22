@@ -1,7 +1,10 @@
 something Hello:
-  func say_hello(name):
-    "hey, " + name
+  func hello(name):
+    while yes:
+      name
 
-hello = Hello.new
-if hello:
-  print(hello.say_hello("world"))
+func stuff:
+  while yes:
+    print("yo")
+
+stuff()

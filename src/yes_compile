@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby -I.
+
+require "compiler"
+require "readline"
+require "parser"
+
+if file = ARGV.first
+  code = File.read(file)
+
+  node = Parser.new.parse(code)
+
+  compiler = Compiler.new
+  compiler.preamble
+
+  node.llvm_compile(compiler)
+  compiler.finish
+
+  compiler.optimize
+
+  compiler.run
+end
