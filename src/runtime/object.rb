@@ -1,7 +1,7 @@
 class YesObject
   attr_accessor :runtime_class, :ruby_value
 
-  def initialize(runtime_class, ruby_value=nil)
+  def initialize(runtime_class, ruby_value=self)
     @runtime_class = runtime_class
     @ruby_value    = ruby_value
   end

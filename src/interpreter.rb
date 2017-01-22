@@ -100,11 +100,11 @@ class SomethingNode
     yes_class = Constants[name]
 
     unless yes_class
-      yes_class = YesClass.new
-      Constants[name] = awesome_class
+      yes_class = YesSomething.new
+      Constants[name] = yes_class
     end
 
-    class_context = Context.new(awesome_class, awesome_class)
+    class_context = Context.new(yes_class, yes_class)
     body.eval(class_context)
 
     yes_class
