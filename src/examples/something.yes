@@ -1,11 +1,5 @@
-something Foo:
-  func does_it_work:
-    "sure"
+something Hello:
+  func fib(n):
+    0
 
-awesome_object = Foo.new
-
-print(awesome_object)
-
-if awesome_object:
-  print("awesome_object.does_it_work = ")
-  print(awesome_object.does_it_work)
+foo = Hello.new

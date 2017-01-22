@@ -8,7 +8,7 @@ class YesMethod
     context = Context.new(receiver)
 
     @params.each_with_index do |params, index|
-      context.locals[param] = arguments[index]
+      context.locals[params] = arguments[index]
     end
 
     @body.eval(context)
