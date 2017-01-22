@@ -33,6 +33,12 @@ class StringNode
   end
 end
 
+class NoNode
+  def eval(context)
+    Constants["no"]
+  end
+end
+
 class YesNode
   def eval(context)
     Constants["yes"]
